@@ -175,7 +175,7 @@ public class Reportar extends JFrame implements ActionListener {
         properties.put("mail.smtp.port","587");
 
         String email = "calculadorahml@gmail.com";
-        String password = "LOLO1234";
+        String password = "xxxxxxx";
 
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
