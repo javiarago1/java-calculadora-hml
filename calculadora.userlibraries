@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="javax.mail">
+    <archive path="C:/Users/JAVIER/Downloads/javax.mail.jar" />
+  </library>
+  <library name="activation-1.1.1">
+    <archive path="C:/Users/JAVIER/Downloads/activation-1.1.1.jar" />
+  </library>
+  <library name="net.objecthunter.exp4j">
+    <archive path="C:/Users/JAVIER/.m2/repository/net/objecthunter/exp4j/0.4.3.BETA-2/exp4j-0.4.3.BETA-2.jar" />
+  </library>
+</eclipse-userlibraries>
+
