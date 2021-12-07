@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="calculadora:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/calculadora_jar</output-path>
+    <root id="archive" name="calculadora.jar">
+      <element id="module-output" name="calculadora" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/activation-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/javax.mail.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/objecthunter/exp4j/0.4.3.BETA-2/exp4j-0.4.3.BETA-2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

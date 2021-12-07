@@ -115,28 +115,28 @@ public class Window extends JFrame implements ActionListener,KeyListener {
 
             }
         }
-        else if(e.getSource().equals(guardar)){
+        else if(e.getSource().equals(guardar)) {
+            JFileChooser chooser = new JFileChooser();
+            chooser.setSelectedFile(new File(tiempo()));
+            int returnVal = chooser.showSaveDialog(this);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                try {
 
-            try {
-                JFileChooser chooser = new JFileChooser();
-                chooser.setSelectedFile(new File(tiempo()));
-                chooser.showSaveDialog(this);
-                File f = chooser.getSelectedFile();
-                FileWriter fw =new FileWriter(f);
-                StringBuilder data= new StringBuilder();
-                if (model.getSize()<=0){
-                    data = new StringBuilder();
-                }
-                else {
-                    for(int i=0;i<model.getSize();i++){
-                        data.append(model.getElementAt(i)).append("\n");
+                    File f = chooser.getSelectedFile();
+                    FileWriter fw = new FileWriter(f);
+                    StringBuilder data = new StringBuilder();
+                    if (model.getSize() <= 0) {
+                        data = new StringBuilder();
+                    } else {
+                        for (int i = 0; i < model.getSize(); i++) {
+                            data.append(model.getElementAt(i)).append("\n");
+                        }
                     }
+                    fw.write(data.toString());
+                    fw.close();
+                } catch (IOException ev) {
+                    JOptionPane.showMessageDialog(this, "La ruta o nombre introducidos son incorrectos", "Error en la ruta o nombre de archivo", JOptionPane.ERROR_MESSAGE);
                 }
-                System.out.println(data);
-                fw.write(data.toString());
-                fw.close();
-            }catch(IOException ev){
-                JOptionPane.showMessageDialog(this, "La ruta o nombre introducidos son incorrectos","Error en la ruta o nombre de archivo",JOptionPane.ERROR_MESSAGE);
             }
         }
 
